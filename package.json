@@ -5,7 +5,8 @@
   "main": "index.js",
   "workspaces": [
     "client",
-    "server"
+    "server",
+    "shared"
   ],
   "scripts": {
     "build": "concurrently \"npm run client:build\" \"npm run server:build\"",
