@@ -1,0 +1,30 @@
+{
+  "name": "stripe-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "server": "npm start --workspace=server",
+    "server:build": "npm run build --workspace=server",
+    "server:dev": "npm run dev --workspace=server"
+  },
+  "keywords": [],
+  "author": "Mathias Kolberg - Legalis",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MathiasCK/stripe-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MathiasCK/stripe-demo/issues"
+  },
+  "homepage": "https://github.com/MathiasCK/stripe-demo#readme",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
