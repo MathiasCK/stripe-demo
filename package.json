@@ -8,10 +8,15 @@
     "server"
   ],
   "scripts": {
+    "build": "concurrently \"npm run client:build\" \"npm run server:build\"",
     "start": "concurrently \"npm run client\" \"npm run server\"",
+    "start:dev": "concurrently \"npm run client:dev\" \"npm run server:dev\"",
     "server": "npm start --workspace=server",
     "server:build": "npm run build --workspace=server",
-    "server:dev": "npm run dev --workspace=server"
+    "server:dev": "npm run dev --workspace=server",
+    "client": "npm run preview --workspace=client",
+    "client:build": "npm run build --workspace=client",
+    "client:dev": "npm run dev --workspace=client"
   },
   "keywords": [],
   "author": "Mathias Kolberg - Legalis",
